@@ -1,4 +1,5 @@
 
+import PropTypes from 'prop-types'
 
 const ProjectCard = ({ image1, image2 }) => {
     return (
@@ -19,6 +20,11 @@ const ProjectCard = ({ image1, image2 }) => {
            
         </>
     )
+}
+
+ProjectCard.propTypes = {
+    image1: PropTypes.string.isRequired,
+    image2: PropTypes.string.isRequired
 }
 
 export default ProjectCard

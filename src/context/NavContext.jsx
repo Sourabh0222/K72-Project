@@ -1,8 +1,7 @@
-import { createContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-
-export const NavbarContext = createContext()
-export const NavbarColorContext = createContext()
+import { NavbarContext, NavbarColorContext } from './NavContexts'
+import PropTypes from 'prop-types'
 
 const NavContext = ({ children } = {}) => {
 
@@ -29,6 +28,10 @@ const NavContext = ({ children } = {}) => {
             </NavbarContext.Provider>
         </div>
     )
+}
+
+NavContext.propTypes = {
+    children: PropTypes.node
 }
 
 export default NavContext

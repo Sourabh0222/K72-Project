@@ -2,6 +2,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { useRef } from 'react'
 import { useLocation } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 const Stairs = (props) => {
 
@@ -58,6 +59,10 @@ const Stairs = (props) => {
             </div>
         </div>
     )
+}
+
+Stairs.propTypes = {
+    children: PropTypes.node
 }
 
 export default Stairs
